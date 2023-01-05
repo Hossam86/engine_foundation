@@ -25,6 +25,21 @@ struct Vector3D {
         return (&x)[i];
     }
 
+    Vector3D &operator*=(float s) {
+        x *= s;
+        y *= s;
+        z *= s;
+        return (*this);
+    }
+
+    Vector3D &operator/=(float s) {
+        x /= s;
+        y /= s;
+        z /= s;
+        return (*this);
+    }
+
+
 };
 
 #endif //GAME_ENGINE_MATH_VECTOR3D_H
