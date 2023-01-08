@@ -80,8 +80,13 @@ inline Vector3D Normlize(const Vector3D &v) {
 inline Vector3D operator+(const Vector3D &a, const Vector3D &b) {
     return Vector3D(a.x + b.x, a.y + b.y, a.z + b.z);
 }
+
 inline Vector3D operator-(const Vector3D &a, const Vector3D &b) {
     return Vector3D(a.x - b.x, a.y - b.y, a.z - b.z);
+}
+
+inline float Dot(const Vector3D &a, const Vector3D &b) {
+    return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
 #endif //GAME_ENGINE_MATH_VECTOR3D_H
